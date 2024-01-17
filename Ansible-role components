@@ -1,0 +1,56 @@
+defaults/:
+
+This directory contains default variables for the role.
+Variables defined here are used unless overridden in the playbook.
+files/:
+
+Files that need to be transferred to the managed nodes.
+These could include configuration files, scripts, or any other necessary files.
+handlers/:
+
+Handlers are tasks that respond to events triggered by other tasks.
+For example, restarting a service after a configuration file is modified.
+meta/:
+
+Metadata for the role.
+It can include dependencies on other roles, supported platforms, or role-specific variables.
+tasks/:
+
+The main directory for tasks related to the role.
+The main.yml file inside this directory usually contains the primary tasks of the role.
+templates/:
+
+Jinja2 templates used to dynamically generate configuration files.
+Templates can include variables and conditionals, allowing for flexible configurations.
+vars/:
+
+Variables that are specific to the role.
+These variables can be used in tasks or templates within the role.
+README.md:
+
+Documentation for the role.
+It provides information on how to use the role, variables, and any other relevant details.
+roles/:
+
+(Optional) Sub-roles that can be included within the main role.
+Useful for further organizing complex roles.
+tests/:
+
+(Optional) Testing-related files for role validation.
+Includes test playbooks or scripts for validating the role's functionality.
+handlers/main.yml:
+
+The main file containing handlers for the role.
+Handlers define actions to be taken in response to events triggered by tasks.
+tasks/main.yml:
+
+The main file containing the primary tasks of the role.
+This is where you define what the role should accomplish on the managed nodes.
+meta/main.yml:
+
+Metadata for the role, including dependencies.
+Lists roles that should be applied before the current role.
+vars/main.yml:
+
+The main file containing variables specific to the role.
+Variables defined here are accessible within tasks and templates of the role.
