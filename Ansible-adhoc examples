@@ -1,0 +1,29 @@
+Run a Simple Command:
+    ansible all -i inventory_file -m shell -a 'ls -l'
+
+Execute a Command as a Different User:
+    ansible all -i inventory_file -m shell -a 'ls -l' -u username
+
+Install a Package (using apt):
+    ansible all -i inventory_file -m shell -a 'sudo apt-get install -y package_name'
+
+Install a Package (using yum):
+    ansible all -i inventory_file -m shell -a 'sudo yum install -y package_name'
+
+Run a Command in the Background:
+    ansible all -i inventory_file -m shell -a 'nohup command &'
+
+Copy Files to Remote Nodes:
+    ansible all -i inventory_file -m shell -a 'cp local_file remote_destination'
+
+Check Disk Space:
+   ansible all -i inventory_file -m shell -a 'df -h'
+
+Check Memory Usage:
+    ansible all -i inventory_file -m shell -a 'free -m'
+
+Run a Script:
+    ansible all -i inventory_file -m shell -a './path/to/script.sh'
+
+Restart a Service:
+    ansible all -i inventory_file -m shell -a 'sudo systemctl restart service_
